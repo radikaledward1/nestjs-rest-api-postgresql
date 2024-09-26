@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: nestjs_tasks_db
+    environment:
+      POSTGRES_USER: postgres   # Cambia 'your_username' por el nombre de usuario deseado
+      POSTGRES_PASSWORD: postgres  # Cambia 'your_password' por la contraseña deseada
+      POSTGRES_DB: tasks_db   # Cambia 'your_database' por el nombre de la base de datos que desees crear
+    ports:
+      - "5432:5432"  # Expone el puerto 5432 para que puedas conectarte desde tu máquina o un cliente
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persistencia de datos en un volumen
+
+volumes:
+  postgres_data:
+    driver: local
