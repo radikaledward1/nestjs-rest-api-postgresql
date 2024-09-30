@@ -11,7 +11,6 @@ import { TasksModule } from './tasks/tasks.module';
       username: 'postgres',
       password: 'postgres',
       database: 'tasks_db',
-      entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: false,
       retryAttempts: 3,
       retryDelay: 1000,

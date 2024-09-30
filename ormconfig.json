@@ -1,0 +1,13 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "tasks_db",
+    "entities": ["src/**/*.entity{.ts,.js}", "dist/**/*.entity{.ts,.js}"],
+    "migrations": ["database/migrations/*.ts"],
+    "migrationsTableName": "migrations",
+    "migrationsRun": false,
+    "synchronize": false
+}

@@ -65,6 +65,18 @@ $ docker compose up -d
 $ pnpm install --save @nestjs/typeorm typeorm pg
 ```
 
+### Migrations
+
+#### Create a new migration
+```bash
+$ pnpm run typeorm -d ./database/data-source.ts migration:generate ./database/migrations/CreateTasksTable
+```
+
+#### Run migrations
+```bash
+$ pnpm run typeorm -d ./database/data-source.ts migration:run
+```
+
 ## Project setup
 
 ```bash
